@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+</head>
+<body>
+
+
+<div class="register">
+    <h1>New User Registration</h1>
+    <h2>Danke Library</h2>
+    <h4>"Discover endless knowledge."</h4>
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+         <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mob" name="mob" placeholder="Mobile number" required> 
+        <label for="Username">Enter Username</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        
+        <button class="btn btn-primary mb-4 btn-lg btn-block" type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

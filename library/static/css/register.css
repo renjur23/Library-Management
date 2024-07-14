@@ -1,0 +1,88 @@
+body {
+    background-image: url(../images/library.jpg);
+    background-size: cover;
+ 
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: left;
+} 
+
+button {
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register h1 {
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    top: 190px;
+    margin: 20px 0;
+}
+.register h2 {
+    font-size: xx-large;
+    color: #000;
+    position: relative;
+    top:150px;
+    left:150px;
+  }
+.register h4 {
+    font-size: xx-large;
+    color: #000;
+    position: relative;
+    top:110px;
+    left:150px;
+  }
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+.btn-block {
+    width: 100%;
+}

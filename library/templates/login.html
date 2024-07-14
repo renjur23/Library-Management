@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/log_in.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Danke Library</h1>
+        <h4>"Discover endless knowledge."</h4>
+        <h2>Login</h2>
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            {% comment %} <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required> {% endcomment %}
+
+            <button type="submit">Login</button>
+            <hr>
+            <button id="create" type="button" onclick="location.href='{% url 'register' %}'">Create New Account</button>
+            
+        </form>
+    </div>
+</body>
+</html>

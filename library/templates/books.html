@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}books{% endblock %}
+{% block body_class %}background{% endblock %}
+{% block content %}
+ {% load static %}
+
+<div class="container text-center" style="background-color: transparent; padding: 30px; display: flex; gap: 10px; flex-wrap: wrap;">
+  {% for i in book %}
+    <div class="card" style="width: 20rem; text-align: left; display: inline-block; margin-left: 30px;">
+      <img src="{% if i.book_image %}{{ i.book_image.url }}{% else %}{% static 'images/default.png' %}{% endif %}" class="card-img-top" style="height: 250px; width: 100%;" alt="Book Image">
+      <div class="card-body">
+        <h5>{{ i.book_name }}</h5>
+        <h5>{{ i.author }}</h5>
+        <h6>Rating {{ i.rating }}</h6>
+        <a href="{% url 'books_detail'  slug=i.slug %}" class="btn btn-primary">view</a>
+
+        
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %} 
